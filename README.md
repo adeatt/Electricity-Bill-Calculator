@@ -1,2 +1,4 @@
 # Electricity-Bill-Calculator
-Basic project for beginners learning C
+Small project i did for learning c. 
+Input: Name,Id and the amout of electricity used.
+
