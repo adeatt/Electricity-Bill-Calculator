@@ -1,18 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
-
-
-
 int main(){
     int unit = 0;
     int ID = 0;
     float charge = 0;
     char Name[30];
-    double allgverbrauch = 0;
-    float zusatz = 0;
-    float Endbetrag = 0;
+    double BILL= 0;
+    float extra_charge = 0;
+    float ENDBILL = 0;
     
     printf("Enter your ID: \n");
     scanf("%d", &ID);
@@ -33,21 +29,21 @@ int main(){
     }else
         charge = 2.00;
     
-    allgverbrauch = unit * charge;
+    BILL = unit * charge;
 
-    if(allgverbrauch > 400)
-        zusatz = allgverbrauch * 0.15;
+    if(BILL > 400)
+        extra_charge = BILL * 0.11;
 
 
-    Endbetrag = allgverbrauch + zusatz;
+    ENDBILL = BILL + extra_charge;
     printf("\n Stromrechnung\n");
     printf("ID:               %d\n", ID);
     printf("Name:             %s\n", Name);
     printf("Unit:             %d\n", unit);
     printf("Charge:           %f\n", charge);
-    printf("allg. Verbrauch:  %f\n", allgverbrauch);
-    printf("zusatz:           %f\n", zusatz);
-    printf("Endbetrag:        %f\n", Endbetrag);
+    printf("Bill:             %f\n", BILL);
+    printf("add. charge:      %f\n", extra_charge);
+    printf("Net Bill:         %f\n", ENDBILL);
     
     
     return 0;
